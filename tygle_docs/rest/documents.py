@@ -13,7 +13,7 @@ from tygle_docs.types.resources import Document, DocumentRESTs
 from tygle_docs.types.responses import BatchUpdateResponse
 
 
-class Docs(REST):
+class Documents(REST):
     def __init__(self, client: Client, parent: GoogleAPI):
         self.Document = create_model("Document", __base__=Document)
         self.Document.__rests__ = DocumentRESTs(self)

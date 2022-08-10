@@ -1,1 +1,1 @@
-from .rest import Docs
+from .rest import Documents

@@ -6,11 +6,11 @@ from tygle.base import Resource, RESTs
 from .body import Body
 
 if TYPE_CHECKING:
-    from tygle_docs.rest import Docs
+    from tygle_docs.rest import Documents
 
 
 class DocumentRESTs(RESTs):
-    def __init__(self, Docs: "Docs") -> None:
+    def __init__(self, Docs: "Documents") -> None:
         self.Docs = Docs
 
 
