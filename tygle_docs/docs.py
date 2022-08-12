@@ -11,4 +11,4 @@ class Docs(API):
 
     def __init__(self, client: Client, api: GoogleAPI) -> None:
         super().__init__(client, api)
-        self.files = Documents(client, self.api)
+        self.documents = Documents(client, self.api)
