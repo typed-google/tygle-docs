@@ -1,9 +1,10 @@
-from typing import TYPE_CHECKING, ClassVar
+from typing import TYPE_CHECKING, ClassVar, Dict
 
 from pydantic import Field, PrivateAttr
 from tygle.base import Resource, RESTs
 
 from .body import Body
+from .named_ranges import NamedRanges
 
 if TYPE_CHECKING:
     from tygle_docs.rest import Documents
@@ -20,3 +21,4 @@ class Document(Resource):
     document_id: str = Field(alias="documentId")
     title: str = Field()
     body: Body = Field()
+    named_ranges: Dict[str, NamedRanges] = Field()

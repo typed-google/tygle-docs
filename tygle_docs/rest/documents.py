@@ -24,9 +24,9 @@ class Documents(REST):
     ) -> BatchUpdateRequest[BatchUpdateResponse]:
         return BatchUpdateRequest(
             self.client,
-            self.parent.docs.batchUpdate(
+            self.parent.documents.batchUpdate(
                 documentId=document_id,
-                json=json.loads(batch_update_body.json()),
+                json=json.loads(batch_update_body.BatchUpdate.json()),
             ),
             BatchUpdateResponse,
             batch_update_body,
@@ -35,7 +35,7 @@ class Documents(REST):
     def create(self, document: Optional[Document] = None) -> DataRequest[Document]:
         return DataRequest(
             self.client,
-            self.parent.docs.create(
+            self.parent.documents.create(
                 json=json.loads(document.json()) if document else None,
             ),
             self.Document,
@@ -50,7 +50,7 @@ class Documents(REST):
     ) -> DataRequest[Document]:
         return DataRequest(
             self.client,
-            self.parent.docs.get(
+            self.parent.documents.get(
                 documentId=document_id,
                 suggestionsViewMode=suggestions_view_mode,
             ),
