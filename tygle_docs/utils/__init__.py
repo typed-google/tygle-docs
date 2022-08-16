@@ -1,1 +1,1 @@
-from .find import find_paragraph
+from .find import find_paragraph_element
