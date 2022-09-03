@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tygle-docs"
-version = "0.1.11"
+version = "0.1.13"
 description = ""
 authors = ["shmookoff <shmookoff@gmail.com>"]
 readme = "README.md"

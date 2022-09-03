@@ -1,4 +1,4 @@
-from typing import Dict, List
+from typing import Any, Dict, List
 
 from pydantic import BaseModel, Field
 
@@ -15,7 +15,7 @@ class TableRow(BaseModel):
     suggested_deletion_ids: List[str] = Field(
         default_factory=list, alias="suggestedDeletionIds"
     )
-    table_row_style: Dict[str, Dict] = Field(alias="tableRowStyle")  # TODO: Type
+    table_row_style: Dict[str, Any] = Field(alias="tableRowStyle")  # TODO: Type
     suggested_table_row_style_changes: Dict[str, Dict] = Field(  # TODO: Type
         default_factory=list, alias="suggestedTableRowStyleChanges"
     )

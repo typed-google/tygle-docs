@@ -4,7 +4,7 @@ from .update_response import UpdateResponse
 
 
 class ReplaceAllText(BaseModel):
-    occurences_changed: int = Field(alias="occurrencesChanged")
+    occurences_changed: int = Field(0, alias="occurrencesChanged")
 
 
 class ReplaceAllTextResponse(UpdateResponse):
