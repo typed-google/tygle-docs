@@ -14,11 +14,8 @@ class UpdateRequestBody(BaseModel):
 
     @property
     def UpdateRequest(self):
-        return UpdateRequest(
-            response_type=self.response_type, request_body={self.key: self}
-        )
+        return UpdateRequest(__root__={self.key: self})
 
 
 class UpdateRequest(BaseModel):
-    response_type: Type[UpdateResponse]
-    request_body: Dict[str, UpdateRequestBody]
+    __root__: Dict[str, UpdateRequestBody]

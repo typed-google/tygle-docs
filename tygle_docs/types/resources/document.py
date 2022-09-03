@@ -21,4 +21,4 @@ class Document(Resource):
     document_id: str = Field(alias="documentId")
     title: str = Field()
     body: Body = Field()
-    named_ranges: Dict[str, NamedRanges] = Field()
+    named_ranges: Dict[str, NamedRanges] = Field(default_factory=dict)
